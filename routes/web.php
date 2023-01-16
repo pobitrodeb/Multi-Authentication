@@ -29,6 +29,7 @@ Route::get('/admin-login', [AdminController::class, 'index'])->name('admin.login
 
 Route::group(['middleware' => 'admin'], function(){
     Route::get('/admin-dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin-logout', [DashboardController::class, 'logout'])->name('admin.logout');
 });
 
 
